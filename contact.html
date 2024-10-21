@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anil Jangid Project</title>
+<style>
+.container
+{
+    background-color: yellow;
+    overflow: hidden;
+}
+.container a
+{
+    text-decoration: none;
+    float: left;
+    display: block;
+    padding: 10px 10px;
+    font-size: medium;
+}
+.container a:hover
+{
+    background-color: purple;
+    color: white;
+}
+.container .logg
+{
+    float: right;
+}
+.container .regg
+{
+    float: right;
+}
+.conn
+{
+    margin-left: 40%;
+    margin-top: 10%;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="home.html">Contact us</a>
+        <a href="register.html" class="regg">Registration us</a>
+        <a href="login.html" class="logg">Login</a>
+    </div>
+    <div class="conn" id="conn">
+        <img src="Logo 1.jpg" alt="" width="10%">
+        <form method="post">
+            <label for="username"><b>User Name: </b></label>
+            <input type="" id="username" placeholder="username" required><br><br>
+    
+            <label for="pass"><b>Password: </b></label>
+            <input type="password" id="pass" placeholder="password" required><br><br>
+    
+            <label for="confirmpass"><b>Confirm Password: </b></label>
+            <input type="password" id="confirmpass" placeholder="Confirm password" required><br><br>
+    
+        </form>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
