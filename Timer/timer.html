@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timer</title>
+    <style>
+      #test {
+        text-align: center;
+        background: #fff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #timer {
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .startbtn{
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .stopbtn{
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .resetbtn{
+        background-color: #0dff35;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #f50aba;
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="test">
+      <div id="timer">00:00:00</div>
+      <button onclick="startTimer()" class="startbtn">Start</button>
+      <button onclick="stopTimer()" class="stopbtn">Stop</button>
+      <button onclick="resetTimer()" class="resetbtn">Reset</button>
+    </div>
+
+    <script>
+      let timerInterval;
+      let seconds = 0;
+
+      function updateTimerDisplay() {
+        const hrs = String(Math.floor(seconds / 3600)).padStart(2, "0");
+        const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
+        const secs = String(seconds % 60).padStart(2, "0");
+        document.getElementById("timer").textContent = `${hrs}:${mins}:${secs}`;
+      }
+
+      function startTimer() {
+        if (timerInterval) return; // Prevent multiple intervals
+        timerInterval = setInterval(() => {
+          seconds++;
+          updateTimerDisplay();
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+
+      function resetTimer() {
+        stopTimer();
+        seconds = 0;
+        updateTimerDisplay();
+      }
+    </script>
+  </body>
+</html>

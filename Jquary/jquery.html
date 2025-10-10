@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- jquery CDN(Content Delivery Network) Link -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <h2 id="head">This is My Porfolio</h2>
+    <h4 id="head1">My Name is Anil Jangid</h4>
+
+    <button id="hidebtn">Hide</button>
+  </body>
+</html>
+<script>
+  // jQuery, React js
+  // javascript libary
+  // Animation, Plugin
+  // DOM - Document(Html), object(Element), model(Tree Structure)
+  // script tag src attribute
+  // CDN - Content Delivery Network (Online, Offline)
+  // effect - Hide(), show(), Toggle(), Slideup(), Slide Down(), Slide Toggle(), FadeIN(), FadeOut(), fadeToggle(), addClass(), removeClass(), toggleClass()
+
+  // Select Element (Traget)
+  // document.getElementsByClassName()
+  // document.getElementById()
+  // document.getElementsByName()
+  // document.getElementsByTagName()
+  // document.querySelector()
+  // document.querySelectorAll()
+
+  // Events - 1. Mouse Event (click, dblclick, Context menu(right click), mouseover, mouseleave), 2. Keyboard Events
+
+  // jquery - syntax
+  $(document).ready(function () {
+    // Hide()
+    $("#hidebtn").click(() => {
+      $("#head").hide();
+      $("#head1").hide();
+    });
+  });
+</script>
